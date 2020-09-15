@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
-}
+html {
+  font-size: 62.5%;
+  font-family: serif; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem; } }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem; } }
 
-.App-link {
-  color: #61dafb;
-}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 2.35em; }
+
+h2 {
+  font-size: 2.00em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.25em; }
+
+h6 {
+  font-size: 1em; }
+
+.script h2 { text-align: right; }
+.script h2.left-aligned { text-align: left }
+.script h3 { position: relative; }
+.script h3:before { color: #bbb; content: attr(id); font-weight: bold; left: -45px; position: absolute; }
+.script h3:after { color: #bbb; content: attr(id); font-weight: bold; right: -45px; position: absolute; }
+
+.script div.dialogue { margin-left: auto; margin-right: auto; width: 68%; }
+.script div.highlighted { background-color: yellow; }
+.script div.dialogue h4 { margin-bottom: 0; margin-left: 23%; font-size: 1.2em;}
+.script div.dialogue p.parenthetical { font-style:italic; margin-bottom: 0; margin-top: 0; margin-left: 11%;}
+.script div.dialogue p { margin-bottom: 0; margin-top: 0; }
+
+.script div.dual-dialogue { margin: 2em 0 0.9em 2%; width: 95%; }
+.script div.dual-dialogue div.dialogue { display: inline-block; margin: 0; width: 45%; }
+.script div.dual-dialogue div.dialogue h4 { margin-top: 0;}
+.script div.dual-dialogue div.dialogue.right { float: right; }
+
+.script p { }
+.script p.centered { text-align: center; width: 92.5%; }
+
+.script p.section { color: #bbb; margin-left: -30px; }
+.script p.synopsis { color: #bbb; margin-left: -20px; }
+
+.script span.italic { font-style: italic; }
+.script span.bold { font-weight: bold; }
+.script span.underline { text-decoration: underline; }
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
 }

@@ -77,9 +77,10 @@ function App() {
 
     return (
         <div className="App">
-        <header className="App-header">
         {main}
-        </header>
+        <div className="footer">
+        Website by Thomas Simatic. Source available on <a href="https://github.com/thomas-sim/fountain-text-viewer">GitHub</a>.
+        </div>
         </div>
     );
 }

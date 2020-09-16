@@ -19,7 +19,6 @@ function FountainViewer ( props ) {
             '<div class="dialogue highlighted"><h4>' + character + '</h4>');
     }
 
-
     return (
         <div className="script">
         <form className="no-print" onSubmit={backEvent}><input type="submit" value="Go back !"/> </form>
@@ -30,6 +29,7 @@ function FountainViewer ( props ) {
 }
 
 
+// custom hook to make React the only source of truth in forms
 function useInput(initialValue){
    const [value,setValue] = useState(initialValue);
 
@@ -41,6 +41,7 @@ function useInput(initialValue){
 }
 
 function App() {
+    // form variables and hook
     const [fountainScript, setFountainScript] = useInput('');
     const [character, setCharacter] = useInput('');
 
@@ -62,6 +63,9 @@ function App() {
                                backEvent={back}/>
     } else {
         main = (
+            <div>
+            <h1>Fountain Text Viewer</h1>
+            <p>Fountain Text Viewer is here to make your life easy with <a href="fountain.io">Fountain</a> scripts !</p>
             <form onSubmit={onSubmit}>
             <label>Write or Paste fountain script:<br/>
                 <textarea cols="90" rows="15" value={fountainScript} onChange={setFountainScript}/>
@@ -72,13 +76,14 @@ function App() {
             <br/>
             <input type="submit" value="Parse the text" />
             </form>
+            </div>
         );
     }
 
     return (
         <div className="App">
         {main}
-        <div className="footer">
+        <div className="footer no-print">
         Website by Thomas Simatic. Source available on <a href="https://github.com/thomas-sim/fountain-text-viewer">GitHub</a>.
         </div>
         </div>

@@ -3,9 +3,9 @@ import fountain from './fountain.js'
 import './App.css';
 
 function FountainViewer ( props ) {
-    let fountainScript = props.fountainScript;
-    let backEvent = props.backEvent;
-    let character = props.character;
+    const fountainScript = props.fountainScript;
+    const backEvent = props.backEvent;
+    const character = props.character.toUpperCase();
 
     // parse the text
     let html = fountain.parse(fountainScript, true).html;

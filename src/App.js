@@ -65,7 +65,7 @@ function App() {
         main = (
             <div>
             <h1>Fountain Text Viewer</h1>
-            <p>Fountain Text Viewer is here to make your life easy with <a href="fountain.io">Fountain</a> scripts !</p>
+            <p>Fountain Text Viewer is here to make your life easy with <a href="fountain.io">Fountain</a> scripts ! After parsing a text, you can print it to pdf for further use.</p>
             <form onSubmit={onSubmit}>
             <label>Write or Paste fountain script:<br/>
                 <textarea cols="90" rows="15" value={fountainScript} onChange={setFountainScript}/>
